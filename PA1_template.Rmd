@@ -27,6 +27,7 @@ total_steps <- aggregate(steps ~ date, act_dat, sum)
 plot(total_steps$date, total_steps$steps, type="h", main="Total number of steps taken each day over 2 months", xlab="Date", ylab="Total steps taken each day", col="blue", lwd=8)
 abline(h=mean(total_steps$steps, na.rm=TRUE), col="black", lwd=2)
 Mean_steps <- mean(total_steps$steps)
+Median_steps <- median(total_steps$steps)
 ```
 
 
@@ -48,6 +49,7 @@ total_steps_impute <- aggregate(steps ~ date, act_impute, sum)
 plot(total_steps_impute$date, total_steps_impute$steps, type="h", main="Total number of steps taken each day over 2 months(with imputed values)", xlab="Date", ylab="Total steps taken each day", col="blue", lwd=8)
 abline(h=mean(total_steps_impute$steps), col="black", lwd=2)
 Mean_steps <- mean(total_steps_impute$steps)
+Median_steps <- median(total_steps_impute$steps)
 ```
 
 ## Are there differences in activity patterns between weekdays and weekends?
